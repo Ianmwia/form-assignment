@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms Assignment</title>
+    <style>
+        header {
+            text-align: center;
+            background-color: rgb(5, 244, 120);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+        }
+        header h1 {
+            font-size: 50px;
+            color: rgb(2, 3, 7);
+        }
+        a {
+            color: rgb(207, 17, 17);
+            font-size: 30px;
+        }
+        h1{
+            background-color: red;
+        }
+        h3 {
+            color: rgb(0, 0, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        footer {
+            text-align: center;
+            background-color: rgb(223, 216, 216);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        footer h3 {
+            font-size: 40px;
+            color: green;
+        }
+    </style>
 </head>
 <body>
  <header>
@@ -11,57 +43,67 @@
         <a href="#home">Home</a>
         <a href="#Form">Form</a>
         <a href="#Footer">Footer</a>
-    </nav>
-    <section id="home">
+    <section id="banner">
         <h1>Zoo Activities</h1>
         <img src="assets/the zoo.jpg" alt="the zoo banner image">
     </section>
+    </nav>
+    
 </header>
     
 <main>
-        <section>
-        <video controls poster="assets/me at the zoo.webp" width="320" height="240">
-            <source src="assets/Me at the zoo - jawed youtube.mp4" type="video/mp4">
-            Your browser does not support the video format
-    </video>
-    <h4>Fun fact: The first Youtube video was filmed at the zoo</h4>
-    </section>
+    <div class="multimedia">
+        <section id="videos">
+            <video controls poster="assets/me at the zoo.webp" width="320" height="240">
+                <source src="assets/Me at the zoo - jawed youtube.mp4" type="video/mp4">
+                Your browser does not support the video format
+            </video>
+                <h4>Fun fact: The first Youtube video was filmed at the zoo</h4>
+        </section>
+        <section id="audio">
+            <h3>click to listen</h3>
+                <audio controls>
+                    <source src="assets/whale sound.mp3" type="audio/mpeg">
+                    Your browser does not support the audio format
+                </audio>
+        </section>
+    </div>
+   
     
-    <h3>click to listen</h3>
-    <audio controls>
-        <source src="assets/whale sound.mp3" type="audio/mpeg">
-        Your browser does not support the audio format
-    </audio>
-    
-    <section id="Form">
-          <h1>Fill in the Form</h1>
+<section id="Form">
+    <fieldset>
+                <legend>Fill in the form</legend>
         <form action="/submit" method="post">
-            <label for="firstname">First Name</label>
-            <input type="text" id="firstname" name="firstname" required>
-            <label for="lastname">Last Name</label>
-            <input type="text" id="lastname" name="lastname" required>
-            <!--email-->
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <!--gender-->
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" id="female" value="female">
-            <!--interests-->
+            <h3>Username</h3>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required> <br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required> <br>
+                <!--email-->
+            <h3>Email</h3>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required> <br>
+                <!--gender-->
+            <h3>Select a gender</h3>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female"> <br>
+                <!--interests-->
             <h3>Activities</h3>
-            <label for="aquarium">Aquarium:</label>
-            <input type="checkbox" name="aquarium" id="aquarium" value="aquarium">
-            <label for="gokart">Go Kart:</label>
-            <input type="checkbox" name="gokart" id="gokart" value="gokart">
-            <label for="clown">Clown show:</label>
-            <input type="checkbox" name="clown" id="clown" value="clown">
-            <label for="magic">Magic Show:</label>
-            <input type="checkbox" name="magic" id="magic" value="magic">
+                <label for="aquarium">Aquarium:</label>
+                <input type="checkbox" name="aquarium" id="aquarium" value="aquarium">
+                <label for="gokart">Go Kart:</label>
+                <input type="checkbox" name="gokart" id="gokart" value="gokart">
+                <label for="clown">Clown show:</label>
+                <input type="checkbox" name="clown" id="clown" value="clown">
+                <label for="magic">Magic Show:</label>
+                <input type="checkbox" name="magic" id="magic" value="magic">
 
 
-            <!--dropdown selection-->
+                <!--dropdown selection-->
             <h3>Payment Method</h3>
+            <br>
             <label for="payment">Payment</label>
             <select name="payment" id="payment">
                 <option value="">Payment Method</option>
@@ -72,18 +114,20 @@
             </select>
             <!--message suggestion-->
             <h3>Leave a comment</h3>
-            <label for="message"></label>
-            <textarea name="message" id="message" rows="10" cols="50"></textarea>
-            <!--submit-->
-            <input type="submit" name="submit" value="Submit">
+                <label for="message"></label>
+                <textarea name="message" id="message" rows="10" cols="50"></textarea>
+                <!--submit-->
+                <input type="submit" name="submit" value="Submit">
 
-         </form>
+        </form>
+    </fieldset>
+        
     </section>
 </main>
     
-  <footer id="Footer">
+<footer id="Footer">
     <h3>Zoo activities</h3>
     copyright &copy; 2025 Zoo Activities
-  </footer>
+</footer>
 </body>
 </html>
